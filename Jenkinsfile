@@ -1,9 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('CVS Checkout') {
       steps {
-        echo 'Jenkins Message'
+        echo 'Code Checkout'
+        ws(dir: 'EMS') {
+          echo 'CVS Checkout Completed'
+        }
+
       }
     }
   }
