@@ -10,5 +10,10 @@ pipeline {
 
       }
     }
+    stage('Initialize') {
+      steps {
+        isUnix()
+      }
+    }
   }
 }
