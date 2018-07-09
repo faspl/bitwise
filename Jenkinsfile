@@ -44,6 +44,7 @@ pipeline {
         build 'AS5'
         build 'AS5_64'
         build 'AS6'
+        build 'AS6_64'
       }
     }
   }
