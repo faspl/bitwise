@@ -65,6 +65,11 @@ pipeline {
             echo 'Success '
           }
         }
+        stage('Failed') {
+          steps {
+            waitForQualityGate true
+          }
+        }
       }
     }
     stage('Email Notification') {
