@@ -87,5 +87,10 @@ pipeline {
         archiveArtifacts(artifacts: 'Release 12-2-0', allowEmptyArchive: true, onlyIfSuccessful: true)
       }
     }
+    stage('End') {
+      steps {
+        echo 'Task Completed'
+      }
+    }
   }
 }
