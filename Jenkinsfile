@@ -11,8 +11,20 @@ pipeline {
       }
     }
     stage('Initialize') {
-      steps {
-        isUnix()
+      parallel {
+        stage('Initialize') {
+          steps {
+            isUnix()
+          }
+        }
+        stage('Docker Build Image') {
+          steps {
+            node(label: 'AS5') {
+              echo 'AS5 Node Healthy'
+            }
+
+          }
+        }
       }
     }
   }
