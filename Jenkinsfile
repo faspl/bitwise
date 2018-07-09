@@ -54,8 +54,17 @@ pipeline {
       }
     }
     stage('Status Reports') {
-      steps {
-        echo 'Build Success or Failure'
+      parallel {
+        stage('Status Reports') {
+          steps {
+            echo 'Build Success or Failure'
+          }
+        }
+        stage('Success') {
+          steps {
+            echo 'Success '
+          }
+        }
       }
     }
     stage('Email Notification') {
