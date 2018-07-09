@@ -58,5 +58,10 @@ pipeline {
         echo 'Build Success or Failure'
       }
     }
+    stage('Email Notification') {
+      steps {
+        echo 'Pass or Fail'
+      }
+    }
   }
 }
