@@ -42,6 +42,7 @@ pipeline {
     stage('Build Job 12-2-0') {
       steps {
         build 'AS5'
+        build 'AS5_64'
       }
     }
   }
