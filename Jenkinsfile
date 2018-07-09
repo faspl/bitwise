@@ -43,6 +43,7 @@ pipeline {
       steps {
         build 'AS5'
         build 'AS5_64'
+        build 'AS6'
       }
     }
   }
