@@ -77,5 +77,10 @@ pipeline {
         echo 'Pass or Fail'
       }
     }
+    stage('Packaging') {
+      steps {
+        echo 'Copy the Package as per Define Build'
+      }
+    }
   }
 }
