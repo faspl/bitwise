@@ -23,6 +23,10 @@ pipeline {
               echo 'AS5 Node Healthy'
             }
 
+            node(label: 'AS5_64') {
+              echo 'AS5_64'
+            }
+
           }
         }
       }
