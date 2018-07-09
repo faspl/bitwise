@@ -53,5 +53,10 @@ pipeline {
         build 'AS6_64'
       }
     }
+    stage('Status Reports') {
+      steps {
+        echo 'Build Success or Failure'
+      }
+    }
   }
 }
