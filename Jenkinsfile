@@ -82,5 +82,10 @@ pipeline {
         echo 'Copy the Package as per Define Build'
       }
     }
+    stage('Release Reports') {
+      steps {
+        archiveArtifacts(artifacts: 'Release 12-2-0', allowEmptyArchive: true, onlyIfSuccessful: true)
+      }
+    }
   }
 }
