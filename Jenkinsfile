@@ -11,6 +11,12 @@ pipeline {
       }
     }
     stage('Initialize') {
+      environment {
+        AS5 = 'AS5_32'
+        AS5_64 = 'AS5_64'
+        AS6 = 'AS_32'
+        AS6_64 = 'AS_64'
+      }
       parallel {
         stage('Initialize') {
           steps {
