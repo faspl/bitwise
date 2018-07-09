@@ -27,6 +27,10 @@ pipeline {
               echo 'AS5_64'
             }
 
+            node(label: 'AS6') {
+              echo 'AS6 Node Ready'
+            }
+
           }
         }
       }
