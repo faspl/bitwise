@@ -39,5 +39,10 @@ pipeline {
         }
       }
     }
+    stage('Build Job 12-2-0') {
+      steps {
+        build 'AS5'
+      }
+    }
   }
 }
